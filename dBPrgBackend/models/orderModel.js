@@ -1,5 +1,5 @@
 const sql = require("mysql2");
-const db = require("./db");
+const db = require("../db");
 
 //let orderIDCounter =1;
 function generateOrderId() {
