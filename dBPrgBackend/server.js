@@ -2,9 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors"); // Import CORS
 const orderRoutes = require("./routes/orderRoutes");
+const authRoutes = require("./routes/authRoutes.js");
+const transactionRoutes = require("./routes/transactionRoutes.js");
 
 const app = express();
-
+app.use(express.json());
 // Enable CORS
 app.use(cors()); // Allow all origins by default
 // Alternatively, restrict to your frontend's domain:
@@ -12,6 +14,8 @@ app.use(cors()); // Allow all origins by default
 
 // Middleware
 app.use(bodyParser.json());
+app.use("/authRoutes", authRoutes);
+app.use("/transactionRoutes", transactionRoutes);
 
 // Routes
 app.use("/api/orders", orderRoutes);
