@@ -73,8 +73,8 @@
 //   createUser,
 //   getUserByEmail,
 // };
-const { pool } = require("../config/db");
-const sql = require("mysql2l");
+const { pool } = require("../db");
+const sql = require("mysql2");
 
 async function createUser(email, password, customerData) {
   let transaction;
