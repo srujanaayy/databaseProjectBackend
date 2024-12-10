@@ -1,4 +1,0 @@
-OrderID, ProductID, PaymentID, Quantity
-1, 1, 1, 1
-1, 2, 1, 2
-2, 3, 2, 1

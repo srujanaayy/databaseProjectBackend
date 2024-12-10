@@ -1,3 +1,0 @@
-CustomerID, Status, ShippingAddress
-1, "Pending", "123 Main St, Anytown, USA"
-2, "Shipped", "456 Elm St, Othertown, USA"
