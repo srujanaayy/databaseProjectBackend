@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Search</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container search-container">
+      <h1>Search Products</h1>
+
+      <form method="POST" action="{{ url_for('search') }}" class="search-form">
+        <input
+          type="text"
+          name="search_query"
+          placeholder="Search for products..."
+          class="search-input"
+        />
+        <button type="submit" class="search-button">Search</button>
+      </form>
+
+      {% if products %}
+      <h2>Search Results</h2>
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for product in products %}
+          <tr>
+            <td>{{ product.ProductName }}</td>
+            <td>{{ product.ProdDescription }}</td>
+            <td>{{ product.Brand }}</td>
+            <td>${{ product.Price }}</td>
+            <td>{{ product.Category }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>No products found.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

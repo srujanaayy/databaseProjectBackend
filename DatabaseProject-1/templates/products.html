@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Products</h1>
+    <div id="products-list">
+      <div class="product">
+        <h3>Stylish Hat</h3>
+        <p>Price: $20</p>
+        <button onclick="addToCart('Stylish Hat', 20)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>Classic T-Shirt</h3>
+        <p>Price: $15</p>
+        <button onclick="addToCart('Classic T-Shirt', 15)">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      function addToCart(productName, price) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let existingProduct = cart.find(
+          (item) => item.productName === productName
+        );
+
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({ productName: productName, price: price, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${productName} has been added to the cart!`);
+      }
+    </script>
+  </body>
+</html>

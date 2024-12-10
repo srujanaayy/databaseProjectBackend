@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Shopping Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <button onclick="goToCheckout()">Checkout</button>
+    <!-- Updated button to go to checkout -->
+
+    <script>
+      // Load cart items from localStorage and display them
+      function loadCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItemsContainer = document.getElementById("cart-items");
+        cartItemsContainer.innerHTML = ""; // Clear existing items
+
+        cart.forEach((item, index) => {
+          const totalPrice = item.price * item.quantity;
+
+          // Create a row for each cart item
+          const row = document.createElement("tr");
+          row.innerHTML = `
+                    <td>${item.productName}</td>
+                    <td><input type="number" value="${
+                      item.quantity
+                    }" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>$${totalPrice.toFixed(2)}</td>
+                    <td><button onclick="removeFromCart(${index})">Remove</button></td>
+                `;
+
+          cartItemsContainer.appendChild(row);
+        });
+      }
+
+      // Update quantity in the cart
+      function updateQuantity(index, newQuantity) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        cart[index].quantity = parseInt(newQuantity);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart(); // Refresh the cart view
+      }
+
+      // Remove an item from the cart
+      function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        cart.splice(index, 1); // Remove item at index
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart(); // Refresh the cart view
+      }
+
+      // Navigate to checkout page
+      function goToCheckout() {
+        window.location.href = "checkout.html"; // Redirect to checkout page
+      }
+
+      // Load cart when page is ready
+      window.onload = loadCart;
+    </script>
+  </body>
+</html>

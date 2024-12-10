@@ -1,0 +1,283 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff7e5f; /* Solid orange background */
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container for Centered Content */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style for Login Page */
+h2,
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Labels and Inputs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #ff7e5f; /* Border color on focus */
+  outline: none;
+}
+
+/* Button Style */
+button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #feb47b; /* Background color on hover */
+}
+
+/* Registration Link */
+.register-link {
+  margin-top: 20px;
+  color: #555;
+}
+
+.register-link a {
+  color: #ff7e5f;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Banner at the Top */
+.welcome-banner {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.welcome-banner h1 {
+  color: white;
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Styles for Search Page */
+.search-container {
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 40px auto; /* Centers the search container */
+}
+
+/* Search Page Header */
+h1,
+h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Search Form Styles */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  outline: none;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Product Table Styles */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+p {
+  text-align: center;
+  color: #666;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff7e5f; /* Updated background color */
+  margin: 0;
+  color: #333;
+}
+
+/* Admin Container */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  background-color: #ff7e5f;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation Styles */
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Logout Link */
+.logout {
+  margin-top: 10px;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Section */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.dashboard-overview h2 {
+  margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.stat-box p {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff7e5f;
+}

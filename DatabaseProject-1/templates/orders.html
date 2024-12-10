@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Orders Management</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer ID</th>
+          <th>Date</th>
+          <th>Order Time</th>
+          <th>Status</th>
+          <th>Shipping Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+        <tr>
+          <td>{{ order.OrderID }}</td>
+          <td>{{ order.CustomerID }}</td>
+          <td>{{ order.Date }}</td>
+          <td>{{ order.OrderTime }}</td>
+          <td>{{ order.Status }}</td>
+          <td>{{ order.ShippingAddress }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
