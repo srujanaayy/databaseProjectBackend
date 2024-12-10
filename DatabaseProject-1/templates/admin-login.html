@@ -1,0 +1,58 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <form action="/admin-login" method="POST" id="admin-login-form">
+        <label for="admin-username">Username:</label>
+        <input type="text" id="admin-username" name="username" required />
+
+        <label for="admin-password">Password:</label>
+        <input type="password" id="admin-password" name="password" required />
+
+        {% if error %}
+        <p style="color: red">{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <form action="/admin-login" method="POST" id="admin-login-form">
+        <label for="admin-username">Username:</label>
+        <input type="text" id="admin-username" name="username" required />
+
+        <label for="admin-password">Password:</label>
+        <input type="password" id="admin-password" name="password" required />
+
+        {% if error %}
+        <p style="color: red">{{ error }}</p>
+        {% endif %}
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html> -->
+-->

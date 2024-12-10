@@ -1,0 +1,287 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff7e5f; /* Solid orange background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+/* Centered Content for Login Page */
+.login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Header Style for Login Page */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Labels and Inputs */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #ff7e5f; /* Border color on focus */
+  outline: none;
+}
+
+/* Login Button Style */
+button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #feb47b; /* Background color on hover */
+}
+
+/* Registration Link */
+.register-link {
+  margin-top: 20px;
+  color: #555;
+}
+
+.register-link a {
+  color: #ff7e5f;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Banner at the Top */
+.welcome-banner {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.welcome-banner h1 {
+  color: white;
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Styles for Search Page */
+.search-container {
+  width: 90%;
+  max-width: 500px; /* Smaller container width for search page */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 40px auto; /* Centers the search container */
+}
+
+/* Search Page Header */
+h1 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+/* Search Form Styles */
+.search-form label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #666;
+}
+
+#keywords {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Filter and Sort Options */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters label {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.filters select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Search Button */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #feb47b;
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.search-results::before {
+  content: "Results:";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff7e5f; /* Updated background color */
+  margin: 0;
+  color: #333;
+}
+
+/* Admin Container */
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  background-color: #ff7e5f;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation Styles */
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Logout Link */
+.logout {
+  margin-top: 10px;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Section */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.dashboard-overview h2 {
+  margin-bottom: 20px;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.stat-box p {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ff7e5f;
+}

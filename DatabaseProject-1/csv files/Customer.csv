@@ -1,0 +1,3 @@
+FirstName, LastName, EmailAddress, PhoneNumber, CardNumber
+"John", "Doe", "johndoe@example.com", "123-456-7890", "1111222233334444"
+"Jane", "Smith", "janesmith@example.com", "098-765-4321", "5555666677778888"

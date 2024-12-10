@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Search</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/admin-dashboard">Dashboard</a></li>
+          <li><a href="/admin-logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search-container">
+        <h2>Search Products</h2>
+        <form action="/search" method="GET" class="search-form">
+          <label for="keywords">Search for products:</label>
+          <input type="text" id="keywords" name="keywords" required />
+          <button type="submit">Search</button>
+        </form>
+
+        {% if results %}
+        <div class="search-results">
+          <h3>Results:</h3>
+          <ul>
+            {% for result in results %}
+            <li>{{ result.name }} - ${{ result.price }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% elif error %}
+        <p style="color: red">{{ error }}</p>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html> -->

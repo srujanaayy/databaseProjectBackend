@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="search-container">
+      <h1>Find Your Style</h1>
+
+      <form id="searchForm" class="search-form">
+        <label for="keywords">Search for products:</label>
+        <input
+          type="text"
+          id="keywords"
+          name="keywords"
+          placeholder="Enter keywords (e.g., 'dress', 'shoes')"
+        />
+
+        <div class="filters">
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="all">All</option>
+            <option value="tops">Tops</option>
+            <option value="bottoms">Bottoms</option>
+            <option value="accessories">Accessories</option>
+            <option value="shoes">Shoes</option>
+          </select>
+
+          <label for="sort">Sort by:</label>
+          <select id="sort" name="sort">
+            <option value="relevance">Relevance</option>
+            <option value="price-low-high">Price: Low to High</option>
+            <option value="price-high-low">Price: High to Low</option>
+            <option value="new-arrivals">New Arrivals</option>
+          </select>
+        </div>
+
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="searchResults" class="search-results">
+        <!-- Search results will appear here -->
+      </div>
+    </div>
+  </body>
+<html>
+<head>
+    <title>Product Search</title>
+</head>
+<body>
+    <h1>Search for Products</h1>
+    <form id="searchForm">
+        <label for="keywords">Enter keywords:</label>
+        <input type="text" id="keywords" name="keywords">
+        <button type="submit">Search</button>
+    </form>
+    <div id="searchResults">
+        <!-- Results will appear here -->
+    </div>
+</body>
+</html>
